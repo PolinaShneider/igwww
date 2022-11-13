@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Social media app</title>
+  </head>
+  <body>
+    <span class="body-overlay"></span>
+    <div class="container">
+      <header class="header">
+        <div class="header__content">
+          <img class="avatar" src="./assets/avatar.svg" alt="codegirl_school" />
+          <div class="header__info">
+            <h2 id="nickname">codegirl_school</h2>
+            <span id="name">IT-школа для девушек | WEB</span>
+            <p id="description">
+              200+ выпускниц школы <br />
+              Разработка сайтов с помощью HTML, CSS и JS <br />
+              5 бесплатных уроков
+            </p>
+          </div>
+          <div class="header__controls">
+            <button type="button" id="add-photo">Добавить публикацию</button>
+            <button type="button" id="edit-bio">
+              <i class="fa fa-pencil"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main class="photos">
+        <div class="photos__info">
+          <span class="photos__info-title">Фото</span>
+          <span><span id="photo-count">0</span> публикаций</span>
+        </div>
+        <div class="photos__content">
+          <div class="post">
+            <img src="./img/post-1.jpg" />
+            <span class="overlay">
+              <div class="overlay__content">
+                <div>
+                  <i class="fa fa-heart"></i>
+                  <span>0</span>
+                </div>
+                <div>
+                  <i class="fa fa-comment"></i>
+                  <span>0</span>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="post">
+            <img src="./img/post-2.jpg" />
+            <span class="overlay">
+              <div class="overlay__content">
+                <div>
+                  <i class="fa fa-heart"></i>
+                  <span>0</span>
+                </div>
+                <div>
+                  <i class="fa fa-comment"></i>
+                  <span>0</span>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="post">
+            <img src="./img/post-3.jpg" />
+            <span class="overlay">
+              <div class="overlay__content">
+                <div>
+                  <i class="fa fa-heart"></i>
+                  <span>0</span>
+                </div>
+                <div>
+                  <i class="fa fa-comment"></i>
+                  <span>0</span>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="post">
+            <img src="./img/post-4.jpg" />
+            <span class="overlay">
+              <div class="overlay__content">
+                <div>
+                  <i class="fa fa-heart"></i>
+                  <span>0</span>
+                </div>
+                <div>
+                  <i class="fa fa-comment"></i>
+                  <span>0</span>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="post">
+            <img src="./img/post-5.jpg" />
+            <span class="overlay">
+              <div class="overlay__content">
+                <div>
+                  <i class="fa fa-heart"></i>
+                  <span>0</span>
+                </div>
+                <div>
+                  <i class="fa fa-comment"></i>
+                  <span>0</span>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="post">
+            <img src="./img/post-6.jpg" />
+            <span class="overlay">
+              <div class="overlay__content">
+                <div>
+                  <i class="fa fa-heart"></i>
+                  <span>0</span>
+                </div>
+                <div>
+                  <i class="fa fa-comment"></i>
+                  <span>0</span>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="post">
+            <img src="./img/post-7.jpg" />
+            <span class="overlay">
+              <div class="overlay__content">
+                <div>
+                  <i class="fa fa-heart"></i>
+                  <span>0</span>
+                </div>
+                <div>
+                  <i class="fa fa-comment"></i>
+                  <span>0</span>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="post">
+            <img src="./img/post-8.jpg" />
+            <span class="overlay">
+              <div class="overlay__content">
+                <div>
+                  <i class="fa fa-heart"></i>
+                  <span>0</span>
+                </div>
+                <div>
+                  <i class="fa fa-comment"></i>
+                  <span>0</span>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="post">
+            <img src="./img/post-9.jpg" />
+            <span class="overlay">
+              <div class="overlay__content">
+                <div>
+                  <i class="fa fa-heart"></i>
+                  <span>0</span>
+                </div>
+                <div>
+                  <i class="fa fa-comment"></i>
+                  <span>0</span>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">© 2022 codegirl_school</footer>
+      <template id="empty-content">
+        <div class="empty-content photos__empty-content">
+          <img class="empty-content__placeholder" src="./assets/photos.svg" />
+          <h2 class="empty-content__title">У вас пока нет публикаций</h2>
+          <p class="empty-content__text">Создайте свою первую публикацию</p>
+          <button type="button" class="empty-content__button">
+            Создать публикацию
+          </button>
+        </div>
+      </template>
+      <div class="add-post-modal hidden">
+        <div>Создание публикации</header>
+        <div class="content">
+          <div class="account-info">
+            <img src="./assets/avatar-small.svg" alt="codegirl_school">
+            <span>codegirl_school</span>
+          </div>
+          <div>
+            <img src="./img/post-1.jpg">
+            <textarea name="post-text" id="post-text" cols="30" rows="10"></textarea>
+            <textarea name="post-hashtags" id="post-hashtags" cols="30" rows="2"></textarea>
+          </div>
+        </div>
+        <div>
+          <button type="button">Опубликовать</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
