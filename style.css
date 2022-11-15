@@ -9,6 +9,7 @@
   --gray: #aeaeaeae;
   --cream-white: #fef9f4;
   --light-border: #f1decf;
+  --modal-delimiter: #f0e8e1;
 }
 
 body {
@@ -198,11 +199,41 @@ button:hover {
   margin-top: 40px;
 }
 
-.add-post-modal {
-  position: fixed;
+.modal {
+  background-color: var(--white);
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+
+.add-post-modal {
+  width: 500px;
+  height: 570px;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.add-post-modal .content {
+  background-color: var(--white);
+}
+
+.add-post-modal .account-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.modal__header {
+  border-bottom: 1px solid var(--light-border);
+  padding: 20px;
+}
+
+.modal__img {
+  padding-top: 50px;
+  padding-bottom: 35px;
 }
 
 textarea,

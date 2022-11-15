@@ -46,7 +46,7 @@
         <div class="photos__content">
           <div class="post">
             <img src="./img/post-1.jpg" />
-            <span class="overlay">
+            <div class="overlay">
               <div class="overlay__content">
                 <div>
                   <i class="fa fa-heart"></i>
@@ -57,11 +57,11 @@
                   <span>0</span>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
           <div class="post">
             <img src="./img/post-2.jpg" />
-            <span class="overlay">
+            <div class="overlay">
               <div class="overlay__content">
                 <div>
                   <i class="fa fa-heart"></i>
@@ -72,11 +72,11 @@
                   <span>0</span>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
           <div class="post">
             <img src="./img/post-3.jpg" />
-            <span class="overlay">
+            <div class="overlay">
               <div class="overlay__content">
                 <div>
                   <i class="fa fa-heart"></i>
@@ -87,11 +87,11 @@
                   <span>0</span>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
           <div class="post">
             <img src="./img/post-4.jpg" />
-            <span class="overlay">
+            <div class="overlay">
               <div class="overlay__content">
                 <div>
                   <i class="fa fa-heart"></i>
@@ -102,11 +102,11 @@
                   <span>0</span>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
           <div class="post">
             <img src="./img/post-5.jpg" />
-            <span class="overlay">
+            <div class="overlay">
               <div class="overlay__content">
                 <div>
                   <i class="fa fa-heart"></i>
@@ -117,11 +117,11 @@
                   <span>0</span>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
           <div class="post">
             <img src="./img/post-6.jpg" />
-            <span class="overlay">
+            <div class="overlay">
               <div class="overlay__content">
                 <div>
                   <i class="fa fa-heart"></i>
@@ -132,11 +132,11 @@
                   <span>0</span>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
           <div class="post">
             <img src="./img/post-7.jpg" />
-            <span class="overlay">
+            <div class="overlay">
               <div class="overlay__content">
                 <div>
                   <i class="fa fa-heart"></i>
@@ -147,11 +147,11 @@
                   <span>0</span>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
           <div class="post">
             <img src="./img/post-8.jpg" />
-            <span class="overlay">
+            <div class="overlay">
               <div class="overlay__content">
                 <div>
                   <i class="fa fa-heart"></i>
@@ -162,11 +162,11 @@
                   <span>0</span>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
           <div class="post">
             <img src="./img/post-9.jpg" />
-            <span class="overlay">
+            <div class="overlay">
               <div class="overlay__content">
                 <div>
                   <i class="fa fa-heart"></i>
@@ -177,7 +177,7 @@
                   <span>0</span>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </main>
@@ -192,17 +192,27 @@
           </button>
         </div>
       </template>
-      <div class="add-post-modal hidden">
-        <div>Создание публикации</header>
+      <div class="modal add-post-modal hidden">
+        <div class="modal__header">Создание публикации</div>
         <div class="content">
-          <div class="account-info">
-            <img src="./assets/avatar-small.svg" alt="codegirl_school">
+          <!-- <div class="account-info">
+            <img src="./assets/avatar-small.svg" alt="codegirl_school" />
             <span>codegirl_school</span>
-          </div>
+          </div> -->
+          <img class="modal__img" width="249" src="./assets/photos.svg" />
           <div>
-            <img src="./img/post-1.jpg">
-            <textarea name="post-text" id="post-text" cols="30" rows="10"></textarea>
-            <textarea name="post-hashtags" id="post-hashtags" cols="30" rows="2"></textarea>
+            <textarea
+              name="post-text"
+              id="post-text"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <textarea
+              name="post-hashtags"
+              id="post-hashtags"
+              cols="30"
+              rows="2"
+            ></textarea>
           </div>
         </div>
         <div>
