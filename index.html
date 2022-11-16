@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="style.css" />
     <title>Social media app</title>
   </head>
-  <body class="with-overlay">
-    <span class="body-overlay active"></span>
+  <body class="">
+    <span class="body-overlay"></span>
     <div class="container">
       <header class="header">
         <div class="header__content">
@@ -241,12 +241,109 @@
       <!-- Add post modal end -->
 
       <!-- Edit bio modal start -->
-      <div class="modal edit-bio-modal hidden">
-        <div class="modal__header">Персональные данные</div>
-        <div class="modal__content">d</div>
-        <div class="modal__footer">Hekki</div>
+      <div class="modal edit-bio-modal">
+        <div class="modal__header edit-bio-modal__header">
+          Персональные данные
+        </div>
+        <div class="modal__content">
+          <div class="account-info">
+            <img src="./assets/avatar-small.svg" alt="codegirl_school" />
+            <span>codegirl_school</span>
+          </div>
+          <div class="edit-bio-modal__fields">
+            <div class="edit-bio-modal__nickname">
+              <label for="nickname">Никнейм</label>
+              <input name="nickname" id="nickname" />
+              <div class="required-field hidden">Обязательное поле</div>
+            </div>
+            <div class="edit-bio-modal__name">
+              <label for="name">Имя пользователя</label>
+              <input name="name" id="name" />
+            </div>
+            <div class="edit-bio-modal__bio">
+              <label for="bio">О себе</label>
+              <textarea name="bio" id="bio" cols="30" rows="2"></textarea>
+              <div class="edit-bio-modal__bio-feedback">
+                <div class="max-capacity v-hidden">
+                  Максимальное количество символов 150
+                </div>
+                <div class="bio-count"><span>0</span>/150</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__footer edit-bio-modal__footer">
+          <button
+            class="edit-bio-modal__button-save edit-bio-modal__button-save--inactive"
+            type="button"
+          >
+            Сохранить
+          </button>
+          <button class="edit-bio-modal__button-cancel" type="button">
+            Отменить
+          </button>
+        </div>
       </div>
       <!-- Edit bio modal end -->
+
+      <!-- Preview post modal start -->
+      <div class="modal preview-post-modal">
+        <div class="preview-post-modal__header">
+          <div class="account-info">
+            <img src="./assets/avatar-small.svg" alt="codegirl_school" />
+            <span>codegirl_school</span>
+          </div>
+          <button type="button">Удалить</button>
+        </div>
+        <div class="modal__content">
+          <img id="post-photo" width="440" src="./img/photo-post.jpg" />
+          <div class="statistics">
+            <span class="statistics__likes">
+              <i class="fa fa-heart"></i>
+              <span>0</span>
+            </span>
+            <span class="statistics__comments">
+              <i class="fa fa-comment"></i>
+              <span>0</span>
+            </span>
+            <p class="post-text">
+              Неожиданный вопрос, правда? Кажется, что HTML и CSS — инструмент
+              разработчиков и верстальщиков. Но на самом деле есть и другие
+              профессии, которым приходится иметь дело с кодом 👌.
+            </p>
+            <p class="post-hashtags">
+              <a href="#">#itaкурсы</a>
+              <a href="#">#сменитьпрофессию</a> <a href="#">#новаяпрофессия</a>
+              <a href="#">#itпрофессии</a> <a href="#">#itпрофессии</a>
+            </p>
+            <div class="comments">
+              <div class="comments__content">
+                <div class="comments__item"></div>
+              </div>
+              <div class="comments__add"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Preview post modal end -->
     </div>
+    <template id="post-template">
+      <div class="post">
+        <img src="" />
+        <div class="overlay">
+          <div class="overlay__content">
+            <div class="likes">
+              <i class="fa fa-heart"></i>
+              <span>0</span>
+            </div>
+            <div class="comments">
+              <i class="fa fa-comment"></i>
+              <span>0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+    <script type="module" src="scripts/main.js"></script>
   </body>
 </html>

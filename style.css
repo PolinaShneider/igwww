@@ -3,6 +3,7 @@
 :root {
   --primary: #f09476;
   --hover: #e98564;
+  --error: #eb8282;
   --disabled: #ebe1da;
   --black: #26201f;
   --white: #ffffff;
@@ -11,10 +12,16 @@
   --light-border: #f1decf;
   --modal-delimiter: #f0e8e1;
   --text-light: #e5d4c7;
+  --text-cream: #e6d4c7;
+  --dark-gray: #706968;
 }
 
 .hidden {
   display: none;
+}
+
+.v-hidden {
+  visibility: hidden;
 }
 
 body {
@@ -32,7 +39,7 @@ body.with-overlay {
 
 .body-overlay.active {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -144,6 +151,9 @@ button:hover {
 
 .post img {
   display: block;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .post .overlay {
@@ -209,8 +219,9 @@ button:hover {
 }
 
 .modal {
+  display: none;
   background-color: var(--white);
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -218,6 +229,10 @@ button:hover {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   z-index: 10;
+}
+
+.modal.active {
+  display: block;
 }
 
 .modal::-webkit-scrollbar {
@@ -236,16 +251,18 @@ button:hover {
   background-color: var(--white);
 }
 
-.add-post-modal .account-info {
+.account-info {
   display: flex;
   align-items: center;
   padding: 20px 0;
   gap: 12px;
+  font-weight: 600;
 }
 
 .modal__header {
   border-bottom: 1px solid var(--light-border);
   padding: 20px;
+  font-weight: 500;
 }
 
 .add-post-modal__img {
@@ -309,4 +326,83 @@ input {
   font-size: 14px;
   margin-left: auto;
   display: block;
+}
+
+.edit-bio-modal {
+  width: 480px;
+  font-size: 14px;
+}
+
+.edit-bio-modal__header {
+  font-size: 16px;
+  text-align: center;
+}
+
+.edit-bio-modal label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.required-field,
+.edit-bio-modal__bio-feedback {
+  font-size: 12px;
+}
+
+.edit-bio-modal__bio-feedback {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.edit-bio-modal__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+
+.edit-bio-modal .required-field,
+.edit-bio-modal__bio-feedback {
+  margin-top: 5px;
+}
+
+.edit-bio-modal .required-field,
+.edit-bio-modal .max-capacity {
+  color: var(--error);
+}
+
+.edit-bio-modal .bio-count {
+  color: var(--text-cream);
+}
+
+.edit-bio-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit-bio-modal__button-save,
+.edit-bio-modal__button-cancel {
+  padding: 10px 18px;
+  font-size: 14px;
+}
+
+.edit-bio-modal__button-save--inactive {
+  background-color: var(--disabled);
+  border-color: var(--disabled);
+  pointer-events: none;
+}
+
+.edit-bio-modal__button-cancel,
+.edit-bio-modal__button-cancel:hover {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--dark-gray);
+}
+
+.preview-post-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
 }
