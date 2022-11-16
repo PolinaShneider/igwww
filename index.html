@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="style.css" />
     <title>Social media app</title>
   </head>
-  <body>
-    <span class="body-overlay"></span>
+  <body class="with-overlay">
+    <span class="body-overlay active"></span>
     <div class="container">
       <header class="header">
         <div class="header__content">
@@ -192,33 +192,61 @@
           </button>
         </div>
       </template>
-      <div class="modal add-post-modal hidden">
+      <!-- Add post modal start -->
+      <div class="modal add-post-modal">
         <div class="modal__header">Создание публикации</div>
-        <div class="content">
-          <!-- <div class="account-info">
-            <img src="./assets/avatar-small.svg" alt="codegirl_school" />
-            <span>codegirl_school</span>
-          </div> -->
-          <img class="modal__img" width="249" src="./assets/photos.svg" />
-          <div>
-            <textarea
-              name="post-text"
-              id="post-text"
-              cols="30"
-              rows="10"
-            ></textarea>
-            <textarea
-              name="post-hashtags"
-              id="post-hashtags"
-              cols="30"
-              rows="2"
-            ></textarea>
+        <div class="modal__content">
+          <div class="add-post-modal__step-1 hidden">
+            <img
+              class="add-post-modal__img"
+              width="249"
+              src="./assets/photos.svg"
+            />
+            <h1 class="add-post-modal__text">Перетащите сюда фото</h1>
+            <button type="button">Добавить фото</button>
+          </div>
+          <div class="add-post-modal__step-2">
+            <div class="account-info">
+              <img src="./assets/avatar-small.svg" alt="codegirl_school" />
+              <span>codegirl_school</span>
+            </div>
+            <img width="440" src="./img/photo-post.jpg" />
+            <div class="add-post-modal__inputs-wrapper">
+              <div class="add-post-modal__post-text">
+                <textarea
+                  name="post-text"
+                  id="post-text"
+                  placeholder="Добавить подпись"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+                <div class="text-counter">0/2000</div>
+              </div>
+              <textarea
+                name="post-hashtags"
+                id="post-hashtags"
+                cols="30"
+                rows="2"
+                placeholder="Добавить хештеги"
+              ></textarea>
+            </div>
           </div>
         </div>
-        <div>
-          <button type="button">Опубликовать</button>
+        <div class="modal__footer">
+          <button class="add-post-modal__button-publish" type="button">
+            Опубликовать
+          </button>
         </div>
       </div>
+      <!-- Add post modal end -->
+
+      <!-- Edit bio modal start -->
+      <div class="modal edit-bio-modal hidden">
+        <div class="modal__header">Персональные данные</div>
+        <div class="modal__content">d</div>
+        <div class="modal__footer">Hekki</div>
+      </div>
+      <!-- Edit bio modal end -->
     </div>
   </body>
 </html>
