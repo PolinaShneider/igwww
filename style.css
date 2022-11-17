@@ -256,6 +256,7 @@ button:hover {
   align-items: center;
   padding: 20px 0;
   gap: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -400,9 +401,77 @@ input {
   color: var(--dark-gray);
 }
 
+.preview-post-modal {
+  width: 560px;
+  background-color: var(--white);
+  max-height: calc(100vh - 10px);
+  overflow-y: auto;
+}
+
 .preview-post-modal__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 60px;
+}
+
+.delete-post-button,
+.delete-post-button:hover {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: var(--dark-gray);
+  font-size: 14px;
+}
+
+.account-info__time {
+  display: block;
+  font-weight: 400;
+  color: var(--text-cream);
+  margin-top: 2px;
+}
+
+.statistics__likes,
+.statistics__comments {
+  border-radius: 50px;
+  background-color: var(--modal-delimiter);
+  padding: 6px 9px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.statistics {
+  margin-top: 20px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.post-text,
+.post-hashtags {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.comments__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.comments__item-nickname {
+  margin: 0;
+  font-size: 14px;
+}
+
+.comments__item-comment {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.comments__item-time {
+  font-size: 14px;
+  color: var(--light-border);
 }
